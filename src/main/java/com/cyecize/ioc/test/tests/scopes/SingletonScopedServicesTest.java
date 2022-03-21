@@ -43,7 +43,7 @@ public class SingletonScopedServicesTest implements Test {
         );
 
         dependencyContainer.reload(DefaultScopedService.class);
-        final DefaultScopedService reloadedScopedService  = dependencyContainer.getService(DefaultScopedService.class);
+        final DefaultScopedService reloadedScopedService = dependencyContainer.getService(DefaultScopedService.class);
 
         Assert.equal(
                 "Reloaded singleton service should be concrete implementation, not proxy",

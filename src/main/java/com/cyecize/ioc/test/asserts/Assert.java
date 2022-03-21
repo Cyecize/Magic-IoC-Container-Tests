@@ -1,5 +1,7 @@
 package com.cyecize.ioc.test.asserts;
 
+import java.util.List;
+
 public class Assert {
 
     public static void that(String testing, boolean expression, String msg) {
@@ -18,6 +20,15 @@ public class Assert {
         }
 
         Assert.that(testing, equal, msg);
+    }
+
+    public static <T> void equal(String testing, List<T> col1, List<T> col2, String msg) {
+        boolean eq = col1.containsAll(col2) && col2.containsAll(col1);
+        if (!eq) {
+            msg += String.format("Expected collection (%s) to equal (%s).", col1, col2);
+        }
+
+        Assert.that(testing, eq, msg);
     }
 
     public static void notEqual(String testing, Object o1, Object o2, String msg) {

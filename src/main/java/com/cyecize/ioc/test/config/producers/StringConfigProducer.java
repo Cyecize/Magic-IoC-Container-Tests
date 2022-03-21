@@ -28,16 +28,16 @@ public class StringConfigProducer implements DependencyResolver {
 
     @Override
     public Object resolve(DependencyParam dependencyParam) {
-       final String val = getAnnotation(dependencyParam).value();
+        final String val = getAnnotation(dependencyParam).value();
 
-       switch (val.toLowerCase()) {
-           case "opt1":
-               return "1";
-           case "opt2":
-               return "2";
-       }
+        switch (val.toLowerCase()) {
+            case "opt1":
+                return "1";
+            case "opt2":
+                return "2";
+        }
 
-       return null;
+        return null;
     }
 
     private Resource getAnnotation(DependencyParam dependencyParam) {

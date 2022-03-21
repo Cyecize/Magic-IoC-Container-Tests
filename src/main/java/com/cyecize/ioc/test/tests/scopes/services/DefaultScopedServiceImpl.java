@@ -4,7 +4,7 @@ import com.cyecize.ioc.annotations.PostConstruct;
 import com.cyecize.ioc.annotations.Service;
 
 @Service
-public class DefaultScopedServiceImpl implements DefaultScopedService{
+public class DefaultScopedServiceImpl implements DefaultScopedService {
 
     private static int id = 0;
 
